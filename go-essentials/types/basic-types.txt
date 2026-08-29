@@ -1,0 +1,15 @@
+BASIC TYPES
+
+int => -5, 10, 12, etc
+float64 => -5.2, 10.123, 12.9
+string => "Hello world", `Hi everyone`
+bool => true or false
+
+NICHE TYPES
+uint => solo valores positivos 0, 10, 255, etc
+int32 => un integer de 32 bits signed con un rango especifico de -2,147,483,648 a 2,147,483,647
+rune => es un alias para int32 representa un unicode point e.g 'a', 'ñ', '世' es decir el codigo unicode del caracter
+uint32 => idem int32 pero solamente positivos desde 0 a 4,294,967,295
+int64 => un integer de 64 bits firmado que representa desde -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807
+int8 o uint8 => siguen la misma regla de int32 y int64
+

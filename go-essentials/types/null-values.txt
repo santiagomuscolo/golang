@@ -1,0 +1,11 @@
+NULL VALUES
+
+En go se le dice "null values" a los valores seteados en las variables si ningun valor es explicitamente seteados
+
+example:
+    var age int; // age es 0 por que es el valor nulo de int, int32, etc
+
+int => 0
+float64 => 0.0
+string => ""
+bool => false
