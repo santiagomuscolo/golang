@@ -1,0 +1,11 @@
+Why pointers??
+
+Avoid unnecesary value copies
+    - By default, GO creates a copy when passing values to functions
+    - For very large & complex values, this may take up too much memory space unnecesarily
+    - With pointers, only one value is stored in memory (and the address is passed around)
+
+Directly mutate values
+    - Pass a pointer (address) instead of a value to a function
+    - The function can then directly edit the underlying value - no return value is required
+    - Can lead to less code (but also to less understandable code or unexpected behaviors)
