@@ -1,13 +1,24 @@
 package main
 
-import "fmt"
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 type user struct {
 	firstName string;
 	lastName string;
 	birthDate string;
 	createdAt time.Time;
+}
+
+func (u *user) outPutUserData() {
+	fmt.Println(u.firstName, u.lastName, u.birthDate);
+}
+
+func (u *user) cleanUserName() {
+	u.firstName = "";
+	u.lastName = "";
 }
 
 func main() {
@@ -21,15 +32,20 @@ func main() {
 		birthDate: birthDate,
 		createdAt: time.Now(),
 	}
-	outputUserData(userData)
+
+	// outputUserData(&userData)
+	userData.outPutUserData();
+	userData.cleanUserName();
+	userData.outPutUserData();
 }
 
-func outputUserData(u user) {
-	fmt.Println(u.firstName, u.lastName, u.birthDate);
-}
+// func outputUserData(u *user) {
+	// Go shortcut for dereferencing a pointer is to use the dot operator directly on the pointer.
+// 	fmt.Println(u.firstName, u.lastName, u.birthDate);
+// }
 
 func getUserData (promptText string) string {
-	fmt.Println(promptText);
+	fmt.Printf(promptText);
 	var value string;
 	fmt.Scan(&value);
 	return value;
